@@ -316,7 +316,7 @@ function App() {
         </div>
         <div className="relative">
           <img
-            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+            src="https://res.cloudinary.com/das8wrfd1/image/upload/v1741849091/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash_dw0bxn.jpg"
             alt="Professional portrait"
             className="rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700"
           />
