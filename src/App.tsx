@@ -270,19 +270,19 @@ function App() {
               <h3 className="font-bold mb-4 dark:text-white">FIND WITH ME</h3>
               <div className="flex gap-4">
                 <a
-                  href="https://www.linkedin.com/in/emilycarter"
+                  href="#"
                   className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
                 >
                   <LinkedinIcon className="w-6 h-6 text-gray-700 dark:text-gray-300" />
                 </a>
                 <a
-                  href="https://github.com/emilycodes"
+                  href="#"
                   className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
                 >
                   <Github className="w-6 h-6 text-gray-700 dark:text-gray-300" />
                 </a>
                 <a
-                  href="https://www.instagram.com/emilydev_creates"
+                  href="#"
                   className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
                 >
                   <MapPin className="w-6 h-6 text-gray-700 dark:text-gray-300" />
@@ -548,13 +548,13 @@ function App() {
               </div>
               <div className="flex gap-8">
                 <a
-                  href="https://www.instagram.com/emilydev_creates"
+                  href="#"
                   className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
                 >
                   <Instagram className="w-6 h-6 text-gray-700 dark:text-gray-300" />
                 </a>
                 <a
-                  href="https://twitter.com/emilydev_creates"
+                  href="#"
                   className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
                 >
                   <Twitter className="w-6 h-6 text-gray-700 dark:text-gray-300" />
