@@ -6,27 +6,27 @@ function App() {
     {
       text: "Emily’s expertise helped us scale our business effortlessly!",
       author: "Sarah L., CEO of TechWave Inc.",
-      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849741/christina-wocintechchat-com-PlikkWB79qs-unsplash_tqyuge.jpg"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849741/christina-wocintechchat-com-PlikkWB79qs-unsplash_tqyuge.jpg&auto=format&fit=crop&w=200&q=80"
     },
     {
       text: "Her designs are not only stunning but also highly functional!",
       author: "James R., Founder of StyleCrafters",
-      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849618/willian-souza-p5BoBF0XJUA-unsplash_vygkfi.jpg"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849618/willian-souza-p5BoBF0XJUA-unsplash_vygkfi.jpg&auto=format&fit=crop&w=200&q=80"
     },
     {
       text: "Emily is a true professional and a pleasure to work with.",
       author: "David K., Marketing Director at MediSync Health",
-      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849633/ali-morshedlou-WMD64tMfc4k-unsplash_nm1ur0.jpg"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849633/ali-morshedlou-WMD64tMfc4k-unsplash_nm1ur0.jpg&auto=format&fit=crop&w=200&q=80"
     },
     {
       text: "We saw a significant increase in leads after Emily optimized our SEO strategy.",
       author: "Linda M., Owner of BrightVision Marketing",
-      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849656/amy-hirschi-b3AYk8HKCl0-unsplash_emjhhv.jpg"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849656/amy-hirschi-b3AYk8HKCl0-unsplash_emjhhv.jpg&auto=format&fit=crop&w=200&q=80"
     },
     {
       text: "Emily's branding and UI/UX design transformed our company's image.",
       author: "Robert P., Creative Director at Creative Edge Agency",
-      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849625/yogendra-singh-HrpYHchKb5Y-unsplash_j7zlqp.jpg"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849625/yogendra-singh-HrpYHchKb5Y-unsplash_j7zlqp.jpg&auto=format&fit=crop&w=200&q=80"
     }
   ];
 
