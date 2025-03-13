@@ -6,27 +6,27 @@ function App() {
     {
       text: "Emily’s expertise helped us scale our business effortlessly!",
       author: "Sarah L., CEO of TechWave Inc.",
-      image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=80"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849741/christina-wocintechchat-com-PlikkWB79qs-unsplash_tqyuge.jpg"
     },
     {
       text: "Her designs are not only stunning but also highly functional!",
       author: "James R., Founder of StyleCrafters",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d674x?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=80"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849618/willian-souza-p5BoBF0XJUA-unsplash_vygkfi.jpg"
     },
     {
       text: "Emily is a true professional and a pleasure to work with.",
       author: "David K., Marketing Director at MediSync Health",
-      image: "https://images.unsplash.com/photo-1544005313-9431566e4c67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=80"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849633/ali-morshedlou-WMD64tMfc4k-unsplash_nm1ur0.jpg"
     },
     {
       text: "We saw a significant increase in leads after Emily optimized our SEO strategy.",
       author: "Linda M., Owner of BrightVision Marketing",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b85a8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=80"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849656/amy-hirschi-b3AYk8HKCl0-unsplash_emjhhv.jpg"
     },
     {
       text: "Emily's branding and UI/UX design transformed our company's image.",
       author: "Robert P., Creative Director at Creative Edge Agency",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd8a72f90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=80"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849625/yogendra-singh-HrpYHchKb5Y-unsplash_j7zlqp.jpg"
     }
   ];
 
@@ -143,22 +143,22 @@ function App() {
       title: "Fashion Retail E-commerce",
       category: "Web Development",
       image:
-        "https://images.unsplash.com/photo-156025009785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-      link: "/portfolio/fashion-retail" // Example link
+        "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849455/analuisa-gamboa-0ohjyDUIUq0-unsplash_njhe87.jpg",
+      link: "" // Example link
     },
     {
       title: "AI-Powered Fitness Tracker",
       category: "Mobile App",
       image:
-        "https://images.unsplash.com/photo-156025009785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-      link: "/portfolio/ai-fitness" // Example link
+        "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849441/anastase-maragos-FP7cfYPPUKM-unsplash_neyukl.jpg",
+      link: "" // Example link
     },
     {
-      title: "Corporate Branding Website",
-      category: "UI/UX Design",
+      title: "Corporate Website Backend Optimization",
+      category: "Web Development",
       image:
-        "https://images.unsplash.com/photo-156025009785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-      link: "/portfolio/corporate-branding" // Example link
+        "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849445/ilya-pavlov-OqtafYT5kTw-unsplash_jetrlm.jpg",
+      link: "" // Example link
     },
   ];
 
