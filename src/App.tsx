@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Linkedin, Figma, Framer, MapPin, Github, LinkedinIcon, MonitorSmartphone, Database, LayoutGrid, Tv, Smartphone, Box, Lightbulb, Search, ShoppingCart, Users, PenTool, ArrowUp, Moon, Sun, Mail, Phone } from 'lucide-react';
+import { Linkedin, Figma, Framer, MapPin, Github, LinkedinIcon, MonitorSmartphone, Database, LayoutGrid, Tv, Smartphone, Box, Lightbulb, Search, ShoppingCart, Users, PenTool, ArrowUp, Moon, Sun, Mail, Phone, Instagram, Twitter } from 'lucide-react';
 
 function App() {
   const testimonials = [
@@ -117,6 +117,7 @@ function App() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [toast, setToast] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -137,37 +138,113 @@ function App() {
     setMessage('');
   };
 
+  const portfolioItems = [
+    {
+      title: "Fashion Retail E-commerce",
+      category: "Web Development",
+      image:
+        "https://images.unsplash.com/photo-156025009785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      link: "/portfolio/fashion-retail" // Example link
+    },
+    {
+      title: "AI-Powered Fitness Tracker",
+      category: "Mobile App",
+      image:
+        "https://images.unsplash.com/photo-156025009785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      link: "/portfolio/ai-fitness" // Example link
+    },
+    {
+      title: "Corporate Branding Website",
+      category: "UI/UX Design",
+      image:
+        "https://images.unsplash.com/photo-156025009785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      link: "/portfolio/corporate-branding" // Example link
+    },
+  ];
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Navigation */}
-      <nav className="flex items-center justify-center px-6 py-4 bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
-        <div className="flex items-center gap-6 justify-center">
-          <a href="#home" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500">
-            HOME
-          </a>
-          <a href="#features" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500">
-            FEATURES
-          </a>
-          <a href="#portfolio" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500">
-            PORTFOLIO
-          </a>
-          <a href="#resume" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500">
-            RESUME
-          </a>
-          <a href="#clients" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500">
-            CLIENTS
-          </a>
-          <a href="#pricing" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500">
-            PRICING
-          </a>
+      <nav className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex items-center">
+              <div className="hidden md:block">
+                <div className="ml-10 flex items-baseline space-x-4">
+                  <a href="#home" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500 px-3 py-2 rounded-md text-sm font-medium">
+                    HOME
+                  </a>
+                  <a href="#features" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500 px-3 py-2 rounded-md text-sm font-medium">
+                    FEATURES
+                  </a>
+                  <a href="#portfolio" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500 px-3 py-2 rounded-md text-sm font-medium">
+                    PORTFOLIO
+                  </a>
+                  <a href="#resume" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500 px-3 py-2 rounded-md text-sm font-medium">
+                    RESUME
+                  </a>
+                  <a href="#clients" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500 px-3 py-2 rounded-md text-sm font-medium">
+                    CLIENTS
+                  </a>
+                  <a href="#pricing" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500 px-3 py-2 rounded-md text-sm font-medium">
+                    PRICING
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="md:block">
+              <div className="ml-4 flex items-center md:ml-6">
+                <a href="#contact" className="bg-pink-500 text-white px-8 py-2 rounded-full hover:bg-pink-600">
+                  Contact
+                </a>
+              </div>
+            </div>
+            <div className="-mr-2 flex md:hidden">
+              <button
+                onClick={toggleMobileMenu}
+                type="button"
+                className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span className="sr-only">Open main menu</span>
+                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg className="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="flex items-center gap-12">
-          <a href="#contact" className="bg-pink-500 text-white px-8 py-2 rounded-full hover:bg-pink-600">
-            Contact
-          </a>
+        <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#home" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500 block px-3 py-2 rounded-md text-base font-medium">
+              HOME
+            </a>
+            <a href="#features" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500 block px-3 py-2 rounded-md text-base font-medium">
+              FEATURES
+            </a>
+            <a href="#portfolio" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500 block px-3 py-2 rounded-md text-base font-medium">
+              PORTFOLIO
+            </a>
+            <a href="#resume" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500 block px-3 py-2 rounded-md text-base font-medium">
+              RESUME
+            </a>
+            <a href="#clients" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500 block px-3 py-2 rounded-md text-base font-medium">
+              CLIENTS
+            </a>
+            <a href="#pricing" className="text-gray-600 hover:text-pink-500 dark:text-gray-300 dark:hover:text-pink-500 block px-3 py-2 rounded-md text-base font-medium">
+              PRICING
+            </a>
+          </div>
         </div>
       </nav>
-      <hr className="border-gray-200 dark:border-gray-700" />
 
       {/* Hero Section */}
       <section
@@ -245,7 +322,6 @@ function App() {
           />
         </div>
       </section>
-      <hr className="border-gray-200 dark:border-gray-700" />
 
       {/* Features Section */}
       <section id="features" className="bg-gray-50 dark:bg-gray-900 py-20">
@@ -304,7 +380,6 @@ function App() {
           </div>
         </div>
       </section>
-      <hr className="border-gray-200 dark:border-gray-700" />
 
       {/* Portfolio Section */}
       <section id="portfolio" className="py-20 bg-gray-50 dark:bg-gray-900">
@@ -315,28 +390,10 @@ function App() {
           <h2 className="text-4xl font-bold text-center mb-12 dark:text-white">My Portfolio</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Fashion Retail E-commerce",
-                category: "Web Development",
-                image:
-                  "https://images.unsplash.com/photo-156025009785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-              },
-              {
-                title: "AI-Powered Fitness Tracker",
-                category: "Mobile App",
-                image:
-                  "https://images.unsplash.com/photo-156025009785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-              },
-              {
-                title: "Corporate Branding Website",
-                category: "UI/UX Design",
-                image:
-                  "https://images.unsplash.com/photo-156025009785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-              },
-            ].map((item, index) => (
-              <div
+            {portfolioItems.map((item, index) => (
+              <a
                 key={index}
+                href={item.link}
                 className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700 hover:scale-105 transition-transform duration-200"
               >
                 <img
@@ -348,12 +405,11 @@ function App() {
                   <h3 className="text-xl font-bold mb-2 dark:text-white">{item.title}</h3>
                   <p className="text-gray-600 dark:text-gray-300">{item.category}</p>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
       </section>
-      <hr className="border-gray-200 dark:border-gray-700" />
 
       {/* Resume Section */}
       <section id="resume" className="bg-gray-50 dark:bg-gray-900 py-20">
@@ -395,7 +451,6 @@ function App() {
           </div>
         </div>
       </section>
-      <hr className="border-gray-200 dark:border-gray-700" />
 
       {/* Clients Section */}
       <section id="clients" className="py-20 bg-gray-50 dark:bg-gray-900">
@@ -425,7 +480,6 @@ function App() {
           </div>
         </div>
       </section>
-      <hr className="border-gray-200 dark:border-gray-700" />
 
       {/* Pricing Section */}
       <section id="pricing" className="bg-gray-50 dark:bg-gray-900 py-20">
@@ -457,7 +511,6 @@ function App() {
           </p>
         </div>
       </section>
-      <hr className="border-gray-200 dark:border-gray-700" />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
@@ -470,20 +523,34 @@ function App() {
               <p className="text-gray-600 mb-4 dark:text-gray-300">
                 Feel free to reach out for collaborations or just a friendly hello!
               </p>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-4">
                 <MapPin className="w-5 h-5 mr-2 text-pink-500" />
                 <span className="text-gray-700 dark:text-gray-300">456 Innovation Street, Silicon Valley, CA, 94025</span>
               </div>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-4">
                 <Mail className="w-5 h-5 mr-2 text-pink-500" />
                 <a href="mailto:emily.carter.dev@example.com" className="text-pink-500 hover:underline dark:text-gray-300">
                   emily.carter.dev@example.com
                 </a>
               </div>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-4">
                 <Phone className="w-5 h-5 mr-2 text-pink-500" />
                 <a href="tel:+15557891234" className="text-pink-500 hover:underline dark:text-gray-300">
                   +1 (555) 789-1234
+                </a>
+              </div>
+              <div className="flex gap-8">
+                <a
+                  href="https://www.instagram.com/emilydev_creates"
+                  className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
+                >
+                  <Instagram className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+                </a>
+                <a
+                  href="https://twitter.com/emilydev_creates"
+                  className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
+                >
+                  <Twitter className="w-6 h-6 text-gray-700 dark:text-gray-300" />
                 </a>
               </div>
             </div>
@@ -520,8 +587,7 @@ function App() {
                   <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300">
                     Message
                   </label>
-                  <textarea
-                    id="message"
+                  <textarea                    id="message"
                     rows={4}
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border border-gray-200 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
                     placeholder="Your Message"
@@ -548,9 +614,7 @@ function App() {
         >
           <ArrowUp className="w-6 h-6" />
         </button>
-      )}
-
-      {toast && (
+      )}      {toast && (
         <div className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded shadow-lg ${toast === 'Please fill in all fields.' ? 'bg-red-500' : 'bg-green-500'} text-white`}>
           {toast}
         </div>
