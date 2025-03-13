@@ -6,27 +6,27 @@ function App() {
     {
       text: "Emily’s expertise helped us scale our business effortlessly!",
       author: "Sarah L., CEO of TechWave Inc.",
-      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849741/christina-wocintechchat-com-PlikkWB79qs-unsplash_tqyuge.jpg&auto=format&fit=crop&w=200&q=80"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849741/christina-wocintechchat-com-PlikkWB79qs-unsplash_tqyuge.jpg"
     },
     {
       text: "Her designs are not only stunning but also highly functional!",
       author: "James R., Founder of StyleCrafters",
-      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849618/willian-souza-p5BoBF0XJUA-unsplash_vygkfi.jpg&auto=format&fit=crop&w=200&q=80"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849618/willian-souza-p5BoBF0XJUA-unsplash_vygkfi.jpg"
     },
     {
       text: "Emily is a true professional and a pleasure to work with.",
       author: "David K., Marketing Director at MediSync Health",
-      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849633/ali-morshedlou-WMD64tMfc4k-unsplash_nm1ur0.jpg&auto=format&fit=crop&w=200&q=80"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849633/ali-morshedlou-WMD64tMfc4k-unsplash_nm1ur0.jpg"
     },
     {
       text: "We saw a significant increase in leads after Emily optimized our SEO strategy.",
       author: "Linda M., Owner of BrightVision Marketing",
-      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849656/amy-hirschi-b3AYk8HKCl0-unsplash_emjhhv.jpg&auto=format&fit=crop&w=200&q=80"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849656/amy-hirschi-b3AYk8HKCl0-unsplash_emjhhv.jpg"
     },
     {
       text: "Emily's branding and UI/UX design transformed our company's image.",
       author: "Robert P., Creative Director at Creative Edge Agency",
-      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849625/yogendra-singh-HrpYHchKb5Y-unsplash_j7zlqp.jpg&auto=format&fit=crop&w=200&q=80"
+      image: "https://res.cloudinary.com/das8wrfd1/image/upload/v1741849625/yogendra-singh-HrpYHchKb5Y-unsplash_j7zlqp.jpg"
     }
   ];
 
@@ -452,34 +452,41 @@ function App() {
         </div>
       </section>
 
-      {/* Clients Section */}
-      <section id="clients" className="py-20 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-6 py-12">
-          <h2 className="text-center mb-2 text-pink-500">CLIENTS</h2>
-          <h1 className="text-4xl font-bold text-center mb-12 dark:text-white">My Clients</h1>
-          <div className="relative h-48 overflow-hidden">
-            <div
-              className="absolute w-full h-full flex transition-transform duration-500"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="w-full flex-shrink-0 px-6 py-4 text-gray-600 text-center rounded-lg shadow-md bg-white border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 hover:scale-105 transition-transform duration-200"
-                >
-                  <img
-                    src={testimonial.image}
-                    alt={`Profile of ${testimonial.author}`}
-                    className="w-16 h-16 rounded-full mx-auto mb-2 border border-gray-200 dark:border-gray-700"
-                  />
-                  <p className="italic text-xl mb-2">"{testimonial.text}"</p>
-                  <p className="font-bold dark:text-white">{testimonial.author}</p>
-                </div>
-              ))}
+{/* Clients Section */}
+<section id="clients" className="py-20 bg-gray-50 dark:bg-gray-900">
+  <div className="container mx-auto px-6 py-12">
+    <h2 className="text-center mb-2 text-pink-500">CLIENTS</h2>
+    <h1 className="text-4xl font-bold text-center mb-12 dark:text-white">My Clients</h1>
+
+    {/* Slider Container */}
+    <div className="relative h-48 overflow-hidden">
+      <div
+        className="absolute w-full h-full flex transition-transform duration-500"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {testimonials.map((testimonial, index) => (
+          <div
+            key={index}
+            className="w-full flex-shrink-0 px-6 py-4 text-gray-600 text-center rounded-lg shadow-md bg-white border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 hover:scale-105 transition-transform duration-200"
+          >
+            {/* Image Wrapper (Fixes Cropping) */}
+            <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-2 border border-gray-200 dark:border-gray-700">
+              <img
+                src={testimonial.image}
+                alt={`Profile of ${testimonial.author}`}
+                className="object-cover w-full h-full"
+              />
             </div>
+
+            <p className="italic text-xl mb-2">"{testimonial.text}"</p>
+            <p className="font-bold dark:text-white">{testimonial.author}</p>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Pricing Section */}
       <section id="pricing" className="bg-gray-50 dark:bg-gray-900 py-20">
